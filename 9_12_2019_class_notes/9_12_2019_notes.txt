@@ -1,0 +1,4 @@
+mv - move a file or directory/rename a file or directory
+* moves all files in working directory to new directory 
+
+cp - copies a file or directory while preserving the original
