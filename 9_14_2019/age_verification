@@ -1,0 +1,32 @@
+var Sarah = 32
+var Bob = 19
+var Henry = 22
+var Katie = 9
+
+var oldEnoughToDrive = function(drive)
+   var age = 16
+if (age>=16) {
+   return(true);
+} else {
+   return(false);
+}
+console.log(oldEnoughToDrive(Sarah));
+
+if (Bob>=16) {
+   console.log(true);
+} else {
+   console.log(false);
+} 
+  
+if (Henry>=16) {
+   console.log(true);
+} else {
+   console.log(false);
+} 
+  
+if (Katie>=16) {
+   console.log(true);
+} else {
+   console.log(false);
+} 
+  
