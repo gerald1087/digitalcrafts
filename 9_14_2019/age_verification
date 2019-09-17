@@ -1,0 +1,71 @@
+var canDrive = function(age) {
+  if (age >= 16) {
+ return true ;
+} else {  
+ return false;
+ }
+}
+
+var canDrink = function(age) {
+  if (age >= 21) {
+ return true;
+} else {
+ return false;
+ }
+}
+
+var canRentCar = function(age) {
+  if (age >= 25) {
+ return true;
+} else {
+ return false ;
+ }
+}
+
+
+var canPlayInPit = function(age) {
+  if (age <= 10) {
+ return true;
+} else {
+ return false;
+ }
+}
+
+var ageArray = [];
+var ageTest = function(name, age){
+
+if(canDrive(age)) {
+ ageArray.push(name + " can drive!");
+} else {
+ ageArray.push(name + " can't drive");
+ }
+
+
+if(canDrink(age)) {
+ ageArray.push(name + " can take shots!");
+} else {
+ ageArray.push(name + " can't take shots!");
+ }
+
+
+if(canRentCar(age)) {
+ ageArray.push(name + " can rent a car!");
+} else {
+ ageArray.push(name + " can't rent a car!");
+ }
+
+
+if(canPlayInPit(age)) {
+ ageArray.push(name + " can play in the balls");
+} else {
+ ageArray.push(name + " can't play in the balls");
+ }
+}
+
+ageTest("Sarah", 32);
+ageTest("Bob", 21);
+ageTest("Henry", 17);
+ageTest("Katie", 9);
+
+console.log(ageArray);
+
