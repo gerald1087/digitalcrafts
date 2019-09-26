@@ -56,15 +56,15 @@ var show = function(items) {
 
 
 var insertedMoney = 0;
-var totalMoney = function(item) {
-       for(var i = 0; i<item.length; i++) {
-               if (item[i] == "nickel") {
+var totalMoney = function(money) {
+       for(var i = 0; i<money.length; i++) {
+               if (money[i] == "nickel") {
                  insertedMoney += 0.05
-               } else if (item[i] == "dime") {
+               } else if (money[i] == "dime") {
                  insertedMoney += 0.10
-               } else if (item[i] == "quarter") {
+               } else if (money[i] == "quarter") {
                  insertedMoney += 0.25
-               } else if (item[i] == "dollar") {
+               } else if (money[i] == "dollar") {
                  insertedMoney += 1.00
                }
            }
@@ -75,44 +75,44 @@ var totalMoney = function(item) {
 var getSnack = function(choice, total) {
  var vend = []
    for(var i=0; i<vendingMachine.length; i++) {
-       if(choice == vendingMachine[i].snack && insertedMoney == vendingMachine[i].price) {
-           vend.push(choice + " is dispensed") && (insertedMoney-=insertedMoney);
-           } else if (choice == vendingMachine[i].snack && insertedMoney > vendingMachine[i].price) {
-               vend.push(choice + " is dispensed." + " And your change is: " + (insertedMoney -= vendingMachine[i].price)) && (insertedMoney-=insertedMoney);
-                 } else if (choice == vendingMachine[i].snack && insertedMoney < vendingMachine[i].price) {
-                     vend.push(choice + " is not dispensed." + " Add additional funds: " + (vendingMachine[i].price -= insertedMoney)) && (insertedMoney-=insertedMoney);
-                     }
-         }
+    if(choice == vendingMachine[i].snack && insertedMoney == vendingMachine[i].price) {
+    vend.push(choice + " is dispensed") && (insertedMoney-=insertedMoney);
+    } else if (choice == vendingMachine[i].snack && insertedMoney > vendingMachine[i].price) {
+    vend.push(choice + " is dispensed." + " And your change is: " + (insertedMoney -= vendingMachine[i].price)) && (insertedMoney-=insertedMoney);
+    } else if (choice == vendingMachine[i].snack && insertedMoney < vendingMachine[i].price) {
+    vend.push(choice + " is not dispensed." + " Add additional funds: " + (vendingMachine[i].price -= insertedMoney)) && (insertedMoney-=insertedMoney);
+      }
+    }
   return vend
    }
 
 
 var geraldinsert = ["dollar", "quarter", "dollar", "dime"];
-      var geraldTotal = totalMoney(geraldinsert);
-      console.log(geraldTotal)
-            var vendSelection = getSnack("Snickers", geraldTotal);
-            console.log(vendSelection);
+    var geraldTotal = totalMoney(geraldinsert);
+    console.log(geraldTotal)
+    var vendSelection = getSnack("Snickers", geraldTotal);
+    console.log(vendSelection);
 
 var seyinsert = ["dollar"];
-      var seyTotal = totalMoney(seyinsert);
-      console.log(seyTotal);
-            var vendSelection = getSnack("Popcorn", seyTotal);
-            console.log(vendSelection);
+    var seyTotal = totalMoney(seyinsert);
+    console.log(seyTotal);
+    var vendSelection = getSnack("Popcorn", seyTotal);
+    console.log(vendSelection);
 
 var johninsert = ["dollar", "dollar", "dime"];
-      var johnTotal = totalMoney(johninsert);
-      console.log(johnTotal);
-            var vendSelection = getSnack("Cup Noodles", johnTotal);
-            console.log(vendSelection);
+    var johnTotal = totalMoney(johninsert);
+    console.log(johnTotal);
+    var vendSelection = getSnack("Cup Noodles", johnTotal);
+    console.log(vendSelection);
 
 var carolinsert = ["dollar", "dime", "dime", "nickel"];
-      var carolTotal = totalMoney(carolinsert);
-      console.log(carolTotal);
-            var vendSelection = getSnack("Nuts", carolTotal);
-            console.log(vendSelection);
+    var carolTotal = totalMoney(carolinsert);
+    console.log(carolTotal);
+    var vendSelection = getSnack("Nuts", carolTotal);
+    console.log(vendSelection);
             
 var steveinsert = ["dollar", "quarter"];
-      var steveTotal = totalMoney(steveinsert);
-      console.log(steveTotal);
-            var vendSelection = getSnack("Cookies", steveTotal);
-            console.log(vendSelection);
+    var steveTotal = totalMoney(steveinsert);
+    console.log(steveTotal);
+    var vendSelection = getSnack("Cookies", steveTotal);
+    console.log(vendSelection);
