@@ -1,0 +1,37 @@
+body {
+    font-family: 'Courier New', Courier, monospace
+}
+
+.sideinfo {
+    width: 200px;
+    position: fixed;
+   
+    top: 20px;
+    left: 10px;
+    background: darkgreen;
+    padding: 10px 0px;
+  }
+  .main {
+    margin-left: 200px;
+    padding: 10px 10px;
+  }
+
+   h1 {
+       font-size: 50pt;
+       text-shadow:  0 0 3px darkgreen;
+   }
+
+   .headings {
+    text-shadow:  0 0 3px darkgreen; 
+   }
+
+   .title2 {
+      font-size: 25pt;
+      border-style: double;
+      border-color: red;
+      overflow: hidden;
+      box-sizing: content-box;
+      width: 600px;
+   }
+
+   

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Post Your Opinion Please!</h2>
+        <form>
+            <lable>Compose</lable>
+            <br />
+            <textarea id="input" rows="5" cols="100"></textarea>
+            <br />
+            <lable>User</lable>
+            <input type="text" id="username" placeholder="name">
+            <br />
+            <lable>Add Image</lable>
+            <input type="url" id="image" placeholder="image">
+            <br />
+            <input type="button" value="Submit" onclick="postText()">
+            <br />
+            <div id="output"></div>
+        </form>
+    </body>
+    <script>
+            var submitText = [];
+            function postText() {
+            document.getElementById("input");
+            var inputArea = document.getElementById("input").value;
+            submitText.push(inputArea);
+            var feedPost = "";
+            for(var i = 0; i < submitText.length; i++) {
+                feedPost = feedPost + submitText[i];
+            }
+            document.getElementById("output").innerHTML = feedPost;
+            }
+        </script>
+</html>
